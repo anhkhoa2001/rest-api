@@ -75,6 +75,7 @@ public class BookTypeController {
         BookType bookTypeInDB = bookTypeService.findById(id);
 
         bookTypeInDB.setName(bookType.getName());
+        bookTypeService.addBookType(bookTypeInDB);
         return new ResponseEntity<>(bookTypeInDB, HttpStatus.OK);
     }
 }

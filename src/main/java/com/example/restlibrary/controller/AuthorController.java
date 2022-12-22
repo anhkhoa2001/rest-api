@@ -74,7 +74,7 @@ public class AuthorController {
 
         authorInDB.setAddress(author.getAddress());
         authorInDB.setName(author.getName());
-
+        authorService.addAuthor(authorInDB);
         return new ResponseEntity<>(authorInDB, HttpStatus.OK);
     }
 }
