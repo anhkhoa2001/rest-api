@@ -9,7 +9,10 @@ public interface BookService {
     List<Book> getAll();
     void addBook(Book book);
     Book findById(Integer id);
-
     void delete(Integer id);
+    List<Book> getAllByAuthor(Integer id);
+    List<Book> getAllByType(Integer type);
+
+    List<Book> getAllByFirstCharacter(Character first_c);
 
 }

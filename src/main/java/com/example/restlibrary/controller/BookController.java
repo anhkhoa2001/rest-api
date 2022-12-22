@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -79,5 +80,28 @@ public class BookController {
         bookService.addBook(bookInDB);
 
         return new ResponseEntity<>(bookInDB, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/get-by-attr/{type}/{id}")
+    public ResponseEntity<List<Book>> getAllByAttr(@PathVariable("type") Integer type,
+                                                   @PathVariable("id") String id) {
+        List<Book> result = new ArrayList<>();
+        //type = 1 thong ke theo tac gia
+        //type = 2 thong ke theo loai sach
+        //type = 3 thong ke theo chu cai
+        switch (type) {
+            case 1:
+                result = bookService.getAllByAuthor(Integer.parseInt(id));
+                break;
+            case 2:
+                result = bookService.getAllByType(Integer.parseInt(id));
+                break;
+            case 3:
+                result = bookService.getAllByFirstCharacter(id.charAt(0));
+                break;
+        }
+
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }

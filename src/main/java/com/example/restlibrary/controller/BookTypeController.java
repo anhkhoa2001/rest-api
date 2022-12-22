@@ -1,6 +1,5 @@
 package com.example.restlibrary.controller;
 
-import com.example.restlibrary.model.Author;
 import com.example.restlibrary.model.BookType;
 import com.example.restlibrary.service.BookTypeService;
 import org.springframework.beans.factory.annotation.Autowired;

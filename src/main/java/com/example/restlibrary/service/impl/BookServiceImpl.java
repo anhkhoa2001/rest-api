@@ -35,4 +35,19 @@ public class BookServiceImpl implements BookService {
     public void delete(Integer id) {
         bookRepository.deleteById(id);
     }
+
+    @Override
+    public List<Book> getAllByAuthor(Integer author_id) {
+        return bookRepository.getAllByAuthor(author_id);
+    }
+
+    @Override
+    public List<Book> getAllByType(Integer type) {
+        return bookRepository.getAllByType(type);
+    }
+
+    @Override
+    public List<Book> getAllByFirstCharacter(Character first_c) {
+        return bookRepository.getAllByFirstCharacter(first_c);
+    }
 }
