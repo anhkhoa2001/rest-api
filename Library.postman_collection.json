@@ -9,8 +9,18 @@
 		{
 			"name": "Add Book",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Co be quang khan do\",\r\n    \"price\": \"10000\",\r\n    \"bookType\": {\r\n        \"name\": \"sach thieu nhi\"\r\n    },\r\n    \"author\": {\r\n        \"name\": \"dam tam khoa\",\r\n        \"address\": \"ha noi\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/book/add"
 			},
 			"response": []
 		},
@@ -18,23 +28,35 @@
 			"name": "Get All Book",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8080/book"
 			},
 			"response": []
 		},
 		{
 			"name": "Edit Book",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Alibaba\",\r\n    \"price\": \"12345\",\r\n    \"bookType\": {\r\n        \"type_id\": 2,\r\n        \"name\": \"sach thieu nhi 1\"\r\n    },\r\n    \"author\": {\r\n        \"name\": \"dam tam khoa\",\r\n        \"address\": \"ha noi\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/book/update/2"
 			},
 			"response": []
 		},
 		{
 			"name": "Delete Book",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/book/delete/1"
 			},
 			"response": []
 		},
@@ -42,51 +64,71 @@
 			"name": "Get All Book Type",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8080/book-type"
 			},
 			"response": []
 		},
 		{
 			"name": "Add Book Type",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"sach thieu nhi 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/book-type/add"
 			},
 			"response": []
 		},
 		{
 			"name": "Edit Book Type",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type_id\": 2,\r\n    \"name\": \"sach thieu nhi 211\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/book-type/update/2"
 			},
 			"response": []
 		},
 		{
 			"name": "Delete Book Type",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/book-type/delete/3"
 			},
 			"response": []
 		},
 		{
 			"name": "Add Author",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"dam tam khoa\",\r\n    \"address\": \"ha noi\"\r\n}",
+					"raw": "{\r\n    \"name\": \"dam tam khoa 1\",\r\n    \"address\": \"cau giay\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
-				}
+				},
+				"url": "http://localhost:8080/author/add"
 			},
 			"response": []
 		},
@@ -94,23 +136,44 @@
 			"name": "Get All Author",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8080/author"
 			},
 			"response": []
 		},
 		{
 			"name": "Edit Author",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"khoa dam\",\r\n    \"address\": \"phu xuyen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/author/update/2"
 			},
 			"response": []
 		},
 		{
 			"name": "Delete Author",
 			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/author/delete/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Get List Book By Attr",
+			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:8080/book/get-by-attr/3/c"
 			},
 			"response": []
 		}
