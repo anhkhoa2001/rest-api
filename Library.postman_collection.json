@@ -169,11 +169,29 @@
 			"response": []
 		},
 		{
-			"name": "Get List Book By Attr",
+			"name": "Statistical By Author",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/book/get-by-attr/3/c"
+				"url": "http://localhost:8080/statistical/author"
+			},
+			"response": []
+		},
+		{
+			"name": "Statistical By Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/statistical/type"
+			},
+			"response": []
+		},
+		{
+			"name": "Statistical By Character",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/statistical/character"
 			},
 			"response": []
 		}

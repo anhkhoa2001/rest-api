@@ -1,6 +1,9 @@
 package com.example.restlibrary.controller;
 
+import com.example.restlibrary.controller.dto.BookDTO;
+import com.example.restlibrary.controller.dto.StatisticalByAuthor;
 import com.example.restlibrary.model.Book;
+import com.example.restlibrary.model.BookType;
 import com.example.restlibrary.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -57,11 +60,14 @@ public class BookController {
     }
 
     @PostMapping(value = "/add")
-    public ResponseEntity<Boolean> addBook(@RequestBody final Book book) {
+    public ResponseEntity<Book> addBook(@RequestBody final BookDTO dto) {
         try {
-            bookService.addBook(book);
+            Book result = bookService.addBook(dto);
 
-            return new ResponseEntity<>(true, HttpStatus.OK);
+            if(result == null) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(result, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -70,38 +76,19 @@ public class BookController {
     }
 
     @PutMapping(value = "/update/{id}")
-    public ResponseEntity<Book> update(@RequestBody final Book book, @PathVariable("id") Integer id) {
-        Book bookInDB = bookService.findById(id);
+    public ResponseEntity<Book> update(@RequestBody final BookDTO dto, @PathVariable("id") Integer id) {
+        try {
+            dto.setId(id);
+            Book result = bookService.addBook(dto);
 
-        bookInDB.setName(book.getName());
-        bookInDB.setPrice(book.getPrice());
-        bookInDB.setBookType(book.getBookType());
-        bookInDB.setAuthor(book.getAuthor());
-        bookService.addBook(bookInDB);
-
-        return new ResponseEntity<>(bookInDB, HttpStatus.OK);
-    }
-
-    @GetMapping(value = "/get-by-attr/{type}/{id}")
-    public ResponseEntity<List<Book>> getAllByAttr(@PathVariable("type") Integer type,
-                                                   @PathVariable("id") String id) {
-        List<Book> result = new ArrayList<>();
-        //type = 1 thong ke theo tac gia
-        //type = 2 thong ke theo loai sach
-        //type = 3 thong ke theo chu cai
-        switch (type) {
-            case 1:
-                result = bookService.getAllByAuthor(Integer.parseInt(id));
-                break;
-            case 2:
-                result = bookService.getAllByType(Integer.parseInt(id));
-                break;
-            case 3:
-                result = bookService.getAllByFirstCharacter(id.charAt(0));
-                break;
+            if(result == null) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-
-        return new ResponseEntity<>(result, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
 }
