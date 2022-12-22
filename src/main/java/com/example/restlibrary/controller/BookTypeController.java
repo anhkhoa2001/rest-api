@@ -46,6 +46,9 @@ public class BookTypeController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Boolean> delete(@PathVariable("id") Integer id) {
         try {
+            if(bookTypeService.findById(id) == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
             bookTypeService.delete(id);
 
             return new ResponseEntity<>(true, HttpStatus.OK);

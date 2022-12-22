@@ -45,6 +45,9 @@ public class AuthorController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Boolean> delete(@PathVariable("id") Integer id) {
         try {
+            if(authorService.findById(id) == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
             authorService.delete(id);
 
             return new ResponseEntity<>(true, HttpStatus.OK);

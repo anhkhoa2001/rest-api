@@ -40,7 +40,7 @@ public class BookController {
     public ResponseEntity<Book> detail(@PathVariable("id") Integer id) {
         Book book = bookService.findById(id);
         if(book == null) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
         return new ResponseEntity<>(book, HttpStatus.OK);
@@ -49,6 +49,9 @@ public class BookController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Boolean> delete(@PathVariable("id") Integer id) {
         try {
+            if(bookService.findById(id) == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
             bookService.delete(id);
 
             return new ResponseEntity<>(true, HttpStatus.OK);
