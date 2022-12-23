@@ -194,6 +194,66 @@
 				"url": "http://localhost:8080/statistical/character"
 			},
 			"response": []
+		},
+		{
+			"name": "Add Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorized",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY3MTc3MDUzNywiZXhwIjoxNjcxNzcwNjU3fQ.T7OJYuMtDL2_V7Jo_MLjNbBUvfeZzivgd2pSe5kdxSYjkRM0vFhDXH6p1wSBc0NgQHUEL3gMNj4eHXku6Q-znA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"khoadamtam1\",\r\n    \"password\": \"1\",\r\n    \"status\": true,\r\n    \"authority_ids\": [3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/customer/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authority\": \"MANAGER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/authority"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/login"
+			},
+			"response": []
 		}
 	]
 }
