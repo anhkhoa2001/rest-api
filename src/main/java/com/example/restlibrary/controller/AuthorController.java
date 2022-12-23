@@ -5,12 +5,11 @@ import com.example.restlibrary.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(value = "/author")
 public class AuthorController {
 
@@ -34,6 +33,9 @@ public class AuthorController {
 
     @GetMapping("/detail/{id}")
     public ResponseEntity<Author> detail(@PathVariable("id") Integer id) {
+        if(id == null || id.equals(0)) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
         Author author = authorService.findById(id);
         if(author == null) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -46,7 +48,7 @@ public class AuthorController {
     public ResponseEntity<Boolean> delete(@PathVariable("id") Integer id) {
         try {
             if(authorService.findById(id) == null) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             authorService.delete(id);
 
@@ -73,11 +75,17 @@ public class AuthorController {
 
     @PutMapping(value = "/update/{id}")
     public ResponseEntity<Author> update(@RequestBody final Author author, @PathVariable("id") Integer id) {
-        Author authorInDB = authorService.findById(id);
+        if(id != null && !id.equals(0)) {
+            Author authorInDB = authorService.findById(id);
 
-        authorInDB.setAddress(author.getAddress());
-        authorInDB.setName(author.getName());
-        authorService.addAuthor(authorInDB);
-        return new ResponseEntity<>(authorInDB, HttpStatus.OK);
+            if(authorInDB != null) {
+                authorInDB.setAddress(author.getAddress());
+                authorInDB.setName(author.getName());
+                authorService.addAuthor(authorInDB);
+                return new ResponseEntity<>(authorInDB, HttpStatus.OK);
+            }
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

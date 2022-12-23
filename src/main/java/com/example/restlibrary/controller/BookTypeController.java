@@ -5,12 +5,11 @@ import com.example.restlibrary.service.BookTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(value = "/book-type")
 
 public class BookTypeController {
@@ -35,6 +34,9 @@ public class BookTypeController {
 
     @GetMapping("/detail/{id}")
     public ResponseEntity<BookType> detail(@PathVariable("id") Integer id) {
+        if(id == null || id.equals(0)) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
         BookType bookType = bookTypeService.findById(id);
         if(bookType == null) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -47,7 +49,7 @@ public class BookTypeController {
     public ResponseEntity<Boolean> delete(@PathVariable("id") Integer id) {
         try {
             if(bookTypeService.findById(id) == null) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             bookTypeService.delete(id);
 
@@ -74,10 +76,16 @@ public class BookTypeController {
 
     @PutMapping(value = "/update/{id}")
     public ResponseEntity<BookType> update(@RequestBody final BookType bookType, @PathVariable("id") Integer id) {
-        BookType bookTypeInDB = bookTypeService.findById(id);
+        if(id != null && !id.equals(0)) {
+            BookType bookTypeInDB = bookTypeService.findById(id);
 
-        bookTypeInDB.setName(bookType.getName());
-        bookTypeService.addBookType(bookTypeInDB);
-        return new ResponseEntity<>(bookTypeInDB, HttpStatus.OK);
+            if(bookTypeInDB != null) {
+                bookTypeInDB.setName(bookType.getName());
+                bookTypeService.addBookType(bookTypeInDB);
+                return new ResponseEntity<>(bookTypeInDB, HttpStatus.OK);
+            }
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

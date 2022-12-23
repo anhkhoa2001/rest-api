@@ -1,20 +1,16 @@
 package com.example.restlibrary.controller;
 
 import com.example.restlibrary.controller.dto.BookDTO;
-import com.example.restlibrary.controller.dto.StatisticalByAuthor;
 import com.example.restlibrary.model.Book;
-import com.example.restlibrary.model.BookType;
 import com.example.restlibrary.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping(value = "/book")
 public class BookController {
 
@@ -38,6 +34,9 @@ public class BookController {
 
     @GetMapping("/detail/{id}")
     public ResponseEntity<Book> detail(@PathVariable("id") Integer id) {
+        if(id == null || id.equals(0)) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
         Book book = bookService.findById(id);
         if(book == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -50,7 +49,7 @@ public class BookController {
     public ResponseEntity<Boolean> delete(@PathVariable("id") Integer id) {
         try {
             if(bookService.findById(id) == null) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             bookService.delete(id);
 
@@ -68,7 +67,7 @@ public class BookController {
             Book result = bookService.addBook(dto);
 
             if(result == null) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(result, HttpStatus.OK);
         } catch (Exception e) {
@@ -85,7 +84,7 @@ public class BookController {
             Book result = bookService.addBook(dto);
 
             if(result == null) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(result, HttpStatus.OK);
         } catch (Exception e) {
