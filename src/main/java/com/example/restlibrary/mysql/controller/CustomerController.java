@@ -1,7 +1,7 @@
 package com.example.restlibrary.mysql.controller;
 
-import com.example.restlibrary.mysql.config.JwtTokenSetup;
 import com.example.restlibrary.mysql.controller.dto.CustomerDTO;
+import com.example.restlibrary.mysql.config.JwtTokenSetup;
 import com.example.restlibrary.mysql.model.Authority;
 import com.example.restlibrary.mysql.model.Customer;
 import com.example.restlibrary.mysql.service.CustomerService;

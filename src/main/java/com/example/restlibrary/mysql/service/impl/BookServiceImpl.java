@@ -25,15 +25,12 @@ import java.util.List;
 public class BookServiceImpl implements BookService {
     @PersistenceContext
     private EntityManager entityManager;
-
     @Autowired
     private BookRepository bookRepository;
     @Autowired
     private AuthorRepository authorRepository;
     @Autowired
     private BookTypeRepository bookTypeRepository;
-
-
 
     @Override
     public List<Book> getAll() {

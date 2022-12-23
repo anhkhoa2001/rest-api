@@ -11,17 +11,19 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import java.util.HashMap;
 import java.util.Objects;
 
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.example.restlibrary.mysql.repository",
-entityManagerFactoryRef = "mysqlEntityManagerFactory",
-transactionManagerRef = "mysqlTransactionManager")
+            entityManagerFactoryRef = "mysqlEntityManagerFactory",
+            transactionManagerRef = "mysqlTransactionManager")
 public class MysqlConfigurationDataSource {
 
     @Bean
@@ -39,9 +41,15 @@ public class MysqlConfigurationDataSource {
                 .type(HikariDataSource.class).build();
     }
 
+    @Bean
+    public EntityManagerFactoryBuilder mysqlManagerFactoryBuilder() {
+        return new EntityManagerFactoryBuilder(new HibernateJpaVendorAdapter(),
+                new HashMap<>(), null);
+    }
+
     @Primary
     @Bean(name = "mysqlEntityManagerFactory")
-    public LocalContainerEntityManagerFactoryBean collegeEntityManagerFactory(
+    public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(
             EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(mysqlDataSource())
@@ -51,7 +59,7 @@ public class MysqlConfigurationDataSource {
 
     @Primary
     @Bean(name = "mysqlTransactionManager")
-    public PlatformTransactionManager collegeTransactionManager(
+    public PlatformTransactionManager mysqlTransactionManager(
             final @Qualifier("mysqlEntityManagerFactory") LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory) {
         return new JpaTransactionManager(Objects.requireNonNull(mysqlEntityManagerFactory.getObject()));
     }
