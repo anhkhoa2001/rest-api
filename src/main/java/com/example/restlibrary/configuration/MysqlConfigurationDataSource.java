@@ -41,23 +41,21 @@ public class MysqlConfigurationDataSource {
                 .type(HikariDataSource.class).build();
     }
 
-    @Bean
+    @Bean(name = "mysqlEntityManagerBuilder")
     public EntityManagerFactoryBuilder mysqlManagerFactoryBuilder() {
         return new EntityManagerFactoryBuilder(new HibernateJpaVendorAdapter(),
                 new HashMap<>(), null);
     }
 
-    @Primary
     @Bean(name = "mysqlEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(
-            EntityManagerFactoryBuilder builder) {
+            @Qualifier("mysqlEntityManagerBuilder") EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(mysqlDataSource())
                 .packages("com.example.restlibrary.mysql.model")
                 .build();
     }
 
-    @Primary
     @Bean(name = "mysqlTransactionManager")
     public PlatformTransactionManager mysqlTransactionManager(
             final @Qualifier("mysqlEntityManagerFactory") LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory) {

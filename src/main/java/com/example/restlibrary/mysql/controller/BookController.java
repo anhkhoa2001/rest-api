@@ -14,13 +14,8 @@ import java.util.List;
 @RequestMapping(value = "/book")
 public class BookController {
 
-    private final BookService bookService;
-
     @Autowired
-    public BookController(BookService bookService) {
-        this.bookService = bookService;
-    }
-
+    private BookService bookService;
 
     @GetMapping
     public ResponseEntity<List<Book>> getAll() {

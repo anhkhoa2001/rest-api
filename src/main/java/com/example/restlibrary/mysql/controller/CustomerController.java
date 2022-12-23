@@ -1,8 +1,6 @@
 package com.example.restlibrary.mysql.controller;
 
 import com.example.restlibrary.mysql.controller.dto.CustomerDTO;
-import com.example.restlibrary.mysql.config.JwtTokenSetup;
-import com.example.restlibrary.mysql.model.Authority;
 import com.example.restlibrary.mysql.model.Customer;
 import com.example.restlibrary.mysql.service.CustomerService;
 import org.slf4j.Logger;
@@ -13,9 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
-import java.util.stream.Collectors;
-
 @RestController
 @RequestMapping(value = "/customer")
 public class CustomerController {
@@ -24,37 +19,22 @@ public class CustomerController {
     private CustomerService customerService;
     @Autowired
     private PasswordEncoder passwordEncoder;
-    @Autowired
-    private JwtTokenSetup jwt;
 
     @PostMapping("/register")
     @ResponseBody
-    public ResponseEntity<Customer> register(@RequestHeader String authorized, @RequestBody CustomerDTO dto) {
-        if(authorized != null && authorized.contains("Bearer ")) {
-            authorized = authorized.substring(7);
-            String username = jwt.getUsernamFromToken(authorized);
-            Customer customer = customerService.getCustomerByUsername(username);
-            Set<String> authorizations = customer.getAuthorities().stream().map(Authority::getAuthority).collect(Collectors.toSet());
-            if(jwt.validateToken(authorized) && authorizations.contains("ADMIN")) {
-                dto.setPassword(dto.getPassword() == null ? "2001" : passwordEncoder.encode(dto.getPassword()));
-                if(dto.getUsername() == null || customerService.getCustomerByUsername(dto.getUsername()) != null) {
-                    LOGGER.error("Tài khoản thêm vào đã bị trùng");
-                    return new ResponseEntity<>(HttpStatus.CONFLICT);
-                }
-                Customer result = customerService.add(dto);
-                if(result == null) {
-                    LOGGER.error("Thêm mới tài khoản thất bại!");
-                    return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-                }
-
-                LOGGER.info("Thêm mới tài khoản thành công");
-                return new ResponseEntity<>(result, HttpStatus.OK);
-            }
-
-            LOGGER.error("Không đủ quyền truy cập");
-            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+    public ResponseEntity<Customer> register(@RequestBody CustomerDTO dto) {
+        dto.setPassword(dto.getPassword() == null ? "2001" : passwordEncoder.encode(dto.getPassword()));
+        if(dto.getUsername() == null || customerService.getCustomerByUsername(dto.getUsername()) != null) {
+            LOGGER.error("Tài khoản thêm vào đã bị trùng");
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+        Customer result = customerService.add(dto);
+        if(result == null) {
+            LOGGER.error("Thêm mới tài khoản thất bại!");
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        LOGGER.info("Thêm mới tài khoản thành công");
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
