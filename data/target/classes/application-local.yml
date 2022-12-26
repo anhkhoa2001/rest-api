@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    mysql:
+      username: root
+      password: 1234
+      url: jdbc:mysql://localhost:3306/rest_api_library?useSSL=false&characterEncoding=UTF-8
+      driver-class-name: com.mysql.jdbc.Driver
+    postgres:
+      username: postgres
+      password: 1
+      url: jdbc:postgresql://localhost:5432/rest_library_ver2?useSSL=false&characterEncoding=UTF-8
+      driver-class-name: org.postgresql.Driver
+      database-platform: org.hibernate.dialect.PostgreSQLDialect

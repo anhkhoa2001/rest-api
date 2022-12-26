@@ -244,7 +244,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"1\"\r\n}",
+					"raw": "{\r\n    \"username\": \"khoadamtam\",\r\n    \"password\": \"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -252,6 +252,40 @@
 					}
 				},
 				"url": "http://localhost:8080/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Person",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add Person",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 5,\r\n    \"borrow_date\": \"2022-12-26\",\r\n    \"expired_date\": \"2022-12-26\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/borrow"
 			},
 			"response": []
 		}
