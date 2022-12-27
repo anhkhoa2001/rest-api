@@ -278,14 +278,50 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"customer_id\": 5,\r\n    \"borrow_date\": \"2022-12-26\",\r\n    \"expired_date\": \"2022-12-26\"\r\n}",
+					"raw": "{\r\n    \"customer_id\": 5,\r\n    \"borrow_date\": \"2022-12-27\",\r\n    \"book_ids\": [2, 3, 4, 5, 6, 13]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:8081/borrow"
+				"url": "http://localhost:8080/borrow"
+			},
+			"response": []
+		},
+		{
+			"name": "Statistical Number Of Books Borrowed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": \"2022-02-02\",\r\n    \"end\": \"2022-12-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/statistical/timer"
+			},
+			"response": []
+		},
+		{
+			"name": "Statistical Most Book Borrowed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start\": \"2023-11-10\",\r\n    \"end\": \"2023-12-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/statistical/most-books"
 			},
 			"response": []
 		}

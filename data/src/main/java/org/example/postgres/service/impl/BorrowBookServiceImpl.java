@@ -1,46 +1,65 @@
 package org.example.postgres.service.impl;
 
 import org.example.dto.BorrowBookDTO;
+import org.example.dto.RequestTimer;
+import org.example.mysql.model.Book;
+import org.example.mysql.service.BookService;
+import org.example.postgres.model.BorrowBook;
+import org.example.postgres.repository.BorrowBookRepository;
 import org.example.postgres.service.BorrowBookService;
-import org.example.postgres.service.CustomerService;
+import org.example.postgres.service.converter.BorrowBookConverter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 @Service
 public class BorrowBookServiceImpl implements BorrowBookService {
 
     @Autowired
-    private CustomerService customerService;
+    private BorrowBookRepository borrowBookRepository;
+
+    @Autowired
+    private BookService bookService;
+
+    @Autowired
+    private BorrowBookConverter borrowBookConverter;
+
+    private DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
     @Override
     public BorrowBookDTO add(BorrowBookDTO dto) {
+        if(dto.getBook_id() != null) {
+            Book book = bookService.findById(dto.getBook_id());
+            dto.setBorrow_date(dto.getBorrow_date());
+            dto.setAuthor_id(book.getAuthor().getId());
+            dto.setType_id(book.getBookType().getType_id());
+            dto.setFirst_character(Character.toUpperCase(book.getName().charAt(0)));
+
+            BorrowBook borrowBook = borrowBookConverter.convertDTO2Model(dto);
+            borrowBook = borrowBookRepository.save(borrowBook);
+
+            return borrowBookConverter.convertModel2DTO(borrowBook);
+        }
+
         return null;
     }
 
-    /*@PersistenceContext
-    @Qualifier("postgresEntityManagerFactory")
-    private EntityManager entityManager;
+    @Override
+    public long countByTimer(RequestTimer timer) {
+        return borrowBookRepository.countByTimer(timer.getStart(), timer.getEnd());
+    }
 
     @Override
-    @Transactional
-    public BorrowBookDTO add(BorrowBookDTO dto) {
+    public Book getBookByTimer(RequestTimer timer) {
         try {
-            String query = "insert into pg_borrow_book (borrow_date, exprired_date, " +
-                                    "customer_id) values (:borrow_date, :borrow_date, :id)";
-            Query q = entityManager.createNativeQuery(query);
-            q.setParameter("borrow_date", dto.getBorrow_date());
-            q.setParameter("id", dto.getCustomer_id());
-            q.executeUpdate();
-            return dto;
+            long book_id = borrowBookRepository.getBookIdByTimer(timer.getStart(), timer.getEnd());
+
+            return bookService.findById((int) book_id);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
-    }*/
+    }
 }
