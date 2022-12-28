@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="app" />
+        <module name="cache" />
         <module name="api" />
         <module name="data" />
       </profile>
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api" options="-parameters" />
       <module name="app" options="-parameters" />
+      <module name="cache" options="-parameters" />
       <module name="data" options="-parameters" />
       <module name="security" options="-parameters" />
     </option>

@@ -1,3 +1,11 @@
+redis:
+#  port: 6379
+#  host: localhost
+  port: 11283
+  host: redis-11283.c292.ap-southeast-1-1.ec2.cloud.redislabs.com
+  pass: l15aNHvU5wvfYsYS3pGS8jmDuArZ1yFp
+  username: default
+
 secret:
   key: khoa2001
   timer: 12000000

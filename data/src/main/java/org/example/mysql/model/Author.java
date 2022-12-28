@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "rest_author")
@@ -46,4 +47,11 @@ public class Author {
         this.address = address;
     }
 
+    public Set<Integer> getBookIds() {
+        return books.stream().map(Book::getId).collect(Collectors.toSet());
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
+    }
 }

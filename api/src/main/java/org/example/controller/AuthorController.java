@@ -1,14 +1,22 @@
 package org.example.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.converter.AuthorRDConverter;
+import org.example.model.AuthorRD;
 import org.example.mysql.model.Author;
 import org.example.mysql.service.AuthorService;
+import org.example.repository.AuthorRDRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -16,11 +24,12 @@ import java.util.List;
 public class AuthorController {
 
     private final AuthorService authorService;
+    private final AuthorRDRepository authorRDRepository;
     @Autowired
-    public AuthorController(AuthorService authorService) {
+    public AuthorController(AuthorService authorService, AuthorRDRepository authorRDRepository) {
         this.authorService = authorService;
+        this.authorRDRepository = authorRDRepository;
     }
-
 
     @GetMapping
     public ResponseEntity<List<Author>> getAll() {
@@ -88,5 +97,40 @@ public class AuthorController {
         }
 
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping(value = "/cache/{id}")
+    public ResponseEntity<AuthorRD> getBookInCacheById(@PathVariable("id") Integer id) {
+        AuthorRD author = authorRDRepository.findByIdInHash(id);
+        if(author != null) {
+            return new ResponseEntity<>(author, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping(value = "/cache")
+    public ResponseEntity<List<AuthorRD>> getAllBookInCache() {
+        List<AuthorRD> authors = authorRDRepository.findAllByHash();
+        if(authors == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if(authors.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(authors, HttpStatus.OK);
+    }
+
+
+    @GetMapping(value = "/cache/synchronize")
+    public ResponseEntity<List<Author>> synchronize() {
+        List<Author> authors = authorService.getAll();
+        authors = authorRDRepository.saveByHash(authors);
+        if(authors == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if(authors.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(authors, HttpStatus.OK);
     }
 }
