@@ -32,3 +32,9 @@ mq:
     xchange: rabbit.ps
     queuename: ps.queue
     key: key.ps
+
+
+email:
+  from: khoadamtam29122022@gmail.com
+  to: khoadamtam@gmail.com
+

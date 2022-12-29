@@ -11,3 +11,8 @@ spring:
       url: jdbc:postgresql://localhost:5432/rest_library_ver2?useSSL=false&characterEncoding=UTF-8
       driver-class-name: org.postgresql.Driver
       database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: khoadamtam29122022@gmail.com
+    password: ucxbbabcdueexmpu
