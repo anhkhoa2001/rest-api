@@ -19,6 +19,12 @@ public class Book {
     @Column(name = "price")
     private String price;
 
+    @Column(name = "content")
+    private String content;
+
+    @Column(name = "path")
+    private String path;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "book_type_id", referencedColumnName = "type_id")
     private BookType bookType;

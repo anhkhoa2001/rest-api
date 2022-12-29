@@ -324,6 +324,75 @@
 				"url": "http://localhost:8080/statistical/most-books"
 			},
 			"response": []
+		},
+		{
+			"name": "Synchronize Redis And DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/author/cache/synchronize"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Author",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Author In Cache",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/author/cache"
+			},
+			"response": []
+		},
+		{
+			"name": "Synchronize Elasticsearch and DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/book/elastic/synchronize"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book In ElasticSearch",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Demo RPC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/demo/rpc/10"
+			},
+			"response": []
+		},
+		{
+			"name": "Demo PS",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Demo Worker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/demo/worker/10"
+			},
+			"response": []
 		}
 	]
 }

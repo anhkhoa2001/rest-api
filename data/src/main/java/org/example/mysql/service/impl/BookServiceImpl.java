@@ -52,6 +52,7 @@ public class BookServiceImpl implements BookService {
             target.setBookType(bookType);
             target.setPrice(source.getPrice());
             target.setName(source.getName());
+            target.setContent(source.getContent());
 
             if(source.getId() != null && !source.getId().equals(0)) {
                 target.setId(source.getId());

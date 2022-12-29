@@ -1,4 +1,4 @@
-package org.example.jwt;
+package org.example.security.jwt;
 
 import org.example.postgres.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
