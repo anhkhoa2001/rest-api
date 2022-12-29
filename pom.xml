@@ -8,7 +8,6 @@
         <module>api</module>
         <module>app</module>
         <module>data</module>
-        <module>cache</module>
     </modules>
 
     <groupId>org.example</groupId>

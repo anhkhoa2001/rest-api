@@ -1,8 +1,10 @@
 package org.example.controller;
 
 import org.example.dto.BookDTO;
+import org.example.search.model.BookES;
+import org.example.search.repository.BookESRepository;
+import org.example.search.service.BookESService;
 import org.example.mysql.model.Book;
-import org.example.mysql.service.AuthorService;
 import org.example.mysql.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +21,9 @@ public class BookController {
     private BookService bookService;
 
     @Autowired
-    private AuthorService authorService;
+    private BookESService bookESService;
+    @Autowired
+    private BookESRepository bookESRepository;
 
     @GetMapping
     public ResponseEntity<List<Book>> getAll() {
@@ -90,6 +94,43 @@ public class BookController {
             e.printStackTrace();
         }
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+
+    @GetMapping(value = "/elastic")
+    public ResponseEntity<List<BookES>> getAllInElastic() {
+        List<BookES> bookESs = bookESService.getAll();
+
+        if(bookESs == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if(bookESs.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(bookESs, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/elastic/synchronize")
+    public ResponseEntity<List<BookES>> synchronize() {
+        List<Book> books = bookService.getAll();
+        List<BookES> bookESs = bookESService.synchronize(books);
+
+        if(bookESs.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(bookESs, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/elastic/{id}")
+    public ResponseEntity<BookES> findByIdInElastic(@PathVariable Integer id) {
+        BookES bookES = bookESService.findById(id);
+
+        if(bookES == null) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(bookES, HttpStatus.OK);
     }
 
 }

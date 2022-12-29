@@ -1,5 +1,9 @@
 package org.example.controller;
 
+import org.example.cache.model.AuthorRD;
+import org.example.cache.model.BookTypeRD;
+import org.example.cache.repository.BookTypeRDRepository;
+import org.example.mysql.model.Author;
 import org.example.mysql.model.BookType;
 import org.example.mysql.service.BookTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +19,12 @@ import java.util.List;
 public class BookTypeController {
 
     private final BookTypeService bookTypeService;
+    private final BookTypeRDRepository bookTypeRDRepository;
 
     @Autowired
-    public BookTypeController(BookTypeService bookTypeService) {
+    public BookTypeController(BookTypeService bookTypeService, BookTypeRDRepository bookTypeRDRepository) {
         this.bookTypeService = bookTypeService;
+        this.bookTypeRDRepository = bookTypeRDRepository;
     }
 
 
@@ -87,5 +93,40 @@ public class BookTypeController {
         }
 
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping(value = "/cache/{id}")
+    public ResponseEntity<BookTypeRD> getBookInCacheById(@PathVariable("id") Integer id) {
+        BookTypeRD bookTypeRD = bookTypeRDRepository.findByIdInHash(id);
+        if(bookTypeRD != null) {
+            return new ResponseEntity<>(bookTypeRD, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping(value = "/cache")
+    public ResponseEntity<List<BookTypeRD>> getAllBookInCache() {
+        List<BookTypeRD> bookTypeRDs = bookTypeRDRepository.findAllByHash();
+        if(bookTypeRDs == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if(bookTypeRDs.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(bookTypeRDs, HttpStatus.OK);
+    }
+
+
+    @GetMapping(value = "/cache/synchronize")
+    public ResponseEntity<List<BookType>> synchronize() {
+        List<BookType> bookTypes = bookTypeService.getAll();
+        bookTypes = bookTypeRDRepository.saveByHash(bookTypes);
+        if(bookTypes == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if(bookTypes.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(bookTypes, HttpStatus.OK);
     }
 }

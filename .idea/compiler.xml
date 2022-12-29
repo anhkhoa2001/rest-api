@@ -8,12 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="app" />
-        <module name="cache" />
         <module name="api" />
         <module name="data" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cache" target="11" />
       <module name="security" target="11" />
     </bytecodeTargetLevel>
   </component>
