@@ -22,7 +22,7 @@ public class SchedulerTask {
     @Autowired
     private BorrowBookService borrowBookService;
 
-    @Scheduled(cron = "30 * * * * *")
+    @Scheduled(cron = "0 7 * * *")
     public void doit() {
         Date yesterday = getYesterday();
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
