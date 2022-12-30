@@ -1,13 +1,10 @@
 package org.example.crawdata;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.example.mysql.model.BookType;
 
-@Component
-public class CrawBookTypeService {
+import java.util.List;
 
-    @Value("${crawler.url}")
-    private String urlCraw;
+public interface CrawBookTypeService {
 
-
+    List<BookType> crawBookTypes(String url);
 }

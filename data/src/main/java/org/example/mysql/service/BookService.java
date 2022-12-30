@@ -14,6 +14,8 @@ public interface BookService {
     List<Book> getAll();
     Book addBook(BookDTO book);
     Book findById(Integer id);
+
+    Book update(Book book);
     void delete(Integer id);
     List<StatisticalByAuthor> getAllByAuthor();
     List<StatisticalByType> getAllByType();

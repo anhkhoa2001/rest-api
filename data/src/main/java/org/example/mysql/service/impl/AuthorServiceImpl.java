@@ -19,8 +19,14 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public void addAuthor(Author book) {
-        authorRepository.save(book);
+    public Author addAuthor(Author book) {
+        try {
+            return authorRepository.save(book);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     @Override

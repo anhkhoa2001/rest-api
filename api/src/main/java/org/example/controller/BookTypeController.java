@@ -38,6 +38,16 @@ public class BookTypeController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    @GetMapping(value = "/detail")
+    public ResponseEntity<BookType> getByName(@RequestParam String name) {
+        BookType rs = bookTypeService.getByName(name);
+        if(rs == null) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(rs, HttpStatus.OK);
+    }
+
     @GetMapping("/detail/{id}")
     public ResponseEntity<BookType> detail(@PathVariable("id") Integer id) {
         if(id == null || id.equals(0)) {
@@ -68,16 +78,13 @@ public class BookTypeController {
     }
 
     @PostMapping(value = "/add")
-    public ResponseEntity<Boolean> addBook(@RequestBody final BookType bookType) {
-        try {
-            bookTypeService.addBookType(bookType);
-
-            return new ResponseEntity<>(true, HttpStatus.OK);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public ResponseEntity<BookType> addBook(@RequestBody final BookType bookType) {
+        BookType rs = bookTypeService.addBookType(bookType);
+        if (rs.getType_id() == null) {
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
 
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(rs, HttpStatus.OK);
     }
 
     @PutMapping(value = "/update/{id}")

@@ -12,6 +12,7 @@ import org.example.mysql.repository.AuthorRepository;
 import org.example.mysql.repository.BookRepository;
 import org.example.mysql.repository.BookTypeRepository;
 import org.example.mysql.service.BookService;
+import org.example.search.repository.BookESRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,8 @@ public class BookServiceImpl implements BookService {
     private AuthorRepository authorRepository;
     @Autowired
     private BookTypeRepository bookTypeRepository;
+    @Autowired
+    private BookESRepository bookESRepository;
 
     @Override
     public List<Book> getAll() {
@@ -67,6 +70,11 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book findById(Integer id) {
         return bookRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Book update(Book book) {
+        return bookRepository.save(book);
     }
 
     @Override

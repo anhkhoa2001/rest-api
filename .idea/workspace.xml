@@ -4990,33 +4990,36 @@
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/logo-jhipster.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/proxy.conf.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/webpack.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/jwt/JwtTokenSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/security/jwt/JwtTokenSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/scheduler/SchedulerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/scheduler/SchedulerTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/WebSecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/jwt/JwtAuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/jwt/JwtTokenSetup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/scheduler/EmailConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/scheduler/EmailConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/scheduler/SchedulerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/scheduler/SchedulerTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/BookTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/BookTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/CrawBookTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/CrawBookTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/controller/AuthorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/controller/BookTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/controller/BookTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/crawdata/CrawBookTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/crawdata/CrawBookTypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/cache/model/BookTypeRD.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/cache/model/BookTypeRD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/dto/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/dto/BookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/BookType.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/BookType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/repository/BookTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/repository/BookTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/AuthorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/BookTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/BookTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/AuthorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/AuthorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookTypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/src/main/resources/application-common.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/application-common.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/target/classes/application-common.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/application-common.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/model/BookTypeRD.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/cache/model/BookTypeRD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/BookDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/dto/BookDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/model/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/model/BookType.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/model/BookType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/repository/BookTypeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/repository/BookTypeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/AuthorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/AuthorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/BookTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/BookTypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/AuthorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/AuthorServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/BookTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/BookTypeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/spring.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/1.png" beforeDir="false" />
@@ -5572,38 +5575,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL-Insert-Multirow.sql.groovy&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/Desktop/kho/intern/elcom/multi-modules/data/src/main/java/org/example&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c33e13561dc256560121f4acdcee831e&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "SQL-Insert-Multirow.sql.groovy",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/kho/intern/elcom/multi-modules/data/src/main/java/org/example",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "spring.configuration.checksum": "8dc5243a5019e07d8abb5a368040df6b",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -5673,7 +5676,8 @@
       <workItem from="1672190478568" duration="24749000" />
       <workItem from="1672276881691" duration="19064000" />
       <workItem from="1672303812445" duration="106000" />
-      <workItem from="1672304942826" duration="847000" />
+      <workItem from="1672304942826" duration="1637000" />
+      <workItem from="1672368389449" duration="10028000" />
     </task>
     <servers />
   </component>

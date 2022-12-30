@@ -1,6 +1,7 @@
 package org.example.mysql.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -12,7 +13,7 @@ public class BookType {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer type_id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 
     @OneToMany(mappedBy = "bookType")
@@ -35,6 +36,9 @@ public class BookType {
     }
 
     public Set<Integer> getBookIds() {
+        /*if(books.isEmpty()) {
+            return new HashSet<>();
+        }*/
         return books.stream().map(Book::getId).collect(Collectors.toSet());
     }
 

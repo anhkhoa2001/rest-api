@@ -65,16 +65,13 @@ public class AuthorController {
     }
 
     @PostMapping(value = "/add")
-    public ResponseEntity<Boolean> addBook(@RequestBody final Author author) {
-        try {
-            authorService.addAuthor(author);
-
-            return new ResponseEntity<>(true, HttpStatus.OK);
-        } catch (Exception e) {
-            e.printStackTrace();
+    public ResponseEntity<Author> addBook(@RequestBody final Author author) {
+        Author rs = authorService.addAuthor(author);
+        if(rs == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(rs, HttpStatus.OK);
     }
 
     @PutMapping(value = "/update/{id}")

@@ -40,4 +40,6 @@ email:
 
 crawler:
   url: https://nhasachmienphi.com/
+  content: body .content_p.content_p_al
+  agent: Mozilla/5.0
 
