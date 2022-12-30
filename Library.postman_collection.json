@@ -115,6 +115,14 @@
 			"response": []
 		},
 		{
+			"name": "Get Book Type By Name",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
 			"name": "Add Author",
 			"request": {
 				"method": "POST",
@@ -326,7 +334,7 @@
 			"response": []
 		},
 		{
-			"name": "Synchronize Redis And DB",
+			"name": "Synchronize Author Redis And DB",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -369,6 +377,24 @@
 			"response": []
 		},
 		{
+			"name": "Synchronize Author Redis And DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/book-type/cache/synchronize"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All BookType In Cache",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/book-type/cache"
+			},
+			"response": []
+		},
+		{
 			"name": "Demo RPC",
 			"request": {
 				"method": "GET",
@@ -391,6 +417,32 @@
 				"method": "GET",
 				"header": [],
 				"url": "http://localhost:8080/demo/worker/10"
+			},
+			"response": []
+		},
+		{
+			"name": "Craw Book Type",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Craw Content Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"url\": \"truyen-ke-tay-tang.html\",\r\n        \"book_id\": 5\r\n    },\r\n    {\r\n        \"url\": \"hue-tim-va-nhung-chuyen-khac.html\",\r\n        \"book_id\": 6\r\n    },\r\n    {\r\n        \"url\": \"108-truyen-ngu-ngon-hay-nhat.html\",\r\n        \"book_id\": 7\r\n    },\r\n    {\r\n        \"url\": \"100-mau-chuyen-co-dong-tay.html\",\r\n        \"book_id\": 8\r\n    },{\r\n        \"url\": \"than-thoai-bac-au.html\",\r\n        \"book_id\": 9\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/crawler"
 			},
 			"response": []
 		}
