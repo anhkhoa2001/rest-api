@@ -30,6 +30,7 @@ public class LoginController {
     @ResponseBody
     public ResponseEntity<ResponseLogin> login(@RequestBody LoginRequest requestInfo) {
         ResponseLogin response = new ResponseLogin();
+        response.setMessage("");
         try {
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
