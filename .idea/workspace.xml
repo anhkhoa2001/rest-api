@@ -4995,11 +4995,8 @@
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/proxy.conf.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/webpack.custom.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/security/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/dto/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/dto/BookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/search/model/BookES.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/search/model/BookES.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/converter/BookESConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/converter/BookESConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/15-4/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/15-4/2.png" beforeDir="false" />
@@ -5661,7 +5658,7 @@
       <workItem from="1672764048885" duration="305000" />
       <workItem from="1672764393709" duration="1439000" />
       <workItem from="1672795137611" duration="482000" />
-      <workItem from="1672797385338" duration="10751000" />
+      <workItem from="1672797385338" duration="12304000" />
     </task>
     <servers />
   </component>

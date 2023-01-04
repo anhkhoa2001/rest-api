@@ -10,7 +10,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableCaching
 @EnableScheduling
 public class Main {
-
     public static void main(String[] args) throws Exception {
         SpringApplication.run(Main.class, args);
     }
