@@ -31,8 +31,7 @@ public class SchedulerTask {
         String body = "Số lượng sách mượn ngày " + strYesterday + "là: " + count;
         String subject = "Số lượng sách mượn ngày " + strYesterday;
         senderEmailService.sendSimpleEmail(body, subject);
-        log.info("Số lượng sách được gửi là thống kê của ngày " + strYesterday);
-        log.info("Đã gửi email thành công vào lúc " + new Date());
+        log.info(body);
     }
 
     public Date getYesterday() {

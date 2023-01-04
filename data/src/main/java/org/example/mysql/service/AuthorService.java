@@ -9,6 +9,5 @@ public interface AuthorService {
     List<Author> getAll();
     Author addAuthor(Author book);
     Author findById(Integer id);
-
     void delete(Integer id);
 }

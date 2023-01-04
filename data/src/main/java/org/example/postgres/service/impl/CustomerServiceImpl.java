@@ -49,7 +49,7 @@ public class CustomerServiceImpl implements CustomerService {
         try {
             Customer customer = getCustomerByUsername(username);
             if(customer == null) {
-                throw new UsernameNotFoundException(username);
+                return null;
             }
             UserDetailCustomize user = new UserDetailCustomize();
             user.setUsername(customer.getUsername());

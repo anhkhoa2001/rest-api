@@ -5,6 +5,7 @@ import org.example.dto.StatisticalByAuthor;
 import org.example.dto.StatisticalByCharacter;
 import org.example.dto.StatisticalByType;
 import org.example.mysql.model.Book;
+import org.example.mysql.repository.StatisticalRepository;
 import org.example.mysql.service.BookService;
 import org.example.postgres.service.BorrowBookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +29,12 @@ public class StatisticalController {
     @Autowired
     private BorrowBookService borrowBookService;
 
+    @Autowired
+    private StatisticalRepository statisticalRepository;
+
     @GetMapping(value = "/author")
     public ResponseEntity<List<StatisticalByAuthor>> statisAuthor() {
-        List<StatisticalByAuthor> result = bookService.getAllByAuthor();
+        List<StatisticalByAuthor> result = statisticalRepository.getAllByAuthor();
         if(result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
@@ -40,7 +44,7 @@ public class StatisticalController {
 
     @GetMapping(value = "/character")
     public ResponseEntity<List<StatisticalByCharacter>> statisCharacter() {
-        List<StatisticalByCharacter> result = bookService.getAllByFirstCharacter();
+        List<StatisticalByCharacter> result = statisticalRepository.getAllByFirstCharacter();
         if(result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
@@ -50,7 +54,7 @@ public class StatisticalController {
 
     @GetMapping(value = "/type")
     public ResponseEntity<List<StatisticalByType>> statisType() {
-        List<StatisticalByType> result = bookService.getAllByType();
+        List<StatisticalByType> result = statisticalRepository.getAllByType();
         if(result.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
