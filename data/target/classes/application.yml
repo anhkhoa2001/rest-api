@@ -1,10 +1,9 @@
 server:
-  port: 8080
   message: Hello Spring Boot
 
 spring:
   profiles:
-    active: local, common
+    active: docker, common
   jpa:
     hibernate:
       ddl-auto: update

@@ -11,8 +11,35 @@ spring:
       url: jdbc:postgresql://localhost:5432/rest_library_ver2?useSSL=false&characterEncoding=UTF-8
       driver-class-name: org.postgresql.Driver
       database-platform: org.hibernate.dialect.PostgreSQLDialect
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: khoadamtam29122022@gmail.com
-    password: ucxbbabcdueexmpu
+
+elasticsearch:
+  port: 9200
+  host: localhost
+
+mq:
+  username: guest
+  password: guest
+  host: localhost
+  port: 15672
+  worker:
+    xchange: rabbit.worker
+    queuename: worker.queue
+    key: key.worker
+  rpc:
+    xchange: rabbit.rpc
+    queuename: rpc.queue
+    key: key.rpc
+  ps:
+    xchange: rabbit.ps
+    queuename: ps.queue
+    key: key.ps
+
+#redis:
+#  port: 11283
+#  host: redis-11283.c292.ap-southeast-1-1.ec2.cloud.redislabs.com
+#  pass: l15aNHvU5wvfYsYS3pGS8jmDuArZ1yFp
+#  username: default
+
+redis:
+  port: 6379
+  host: localhost

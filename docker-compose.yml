@@ -1,0 +1,64 @@
+version: "3.9"
+
+services:
+  multi-app:
+    image: multi
+    build: .
+    restart: always
+    ports:
+      - 8081:8080
+    depends_on:
+      - mysqldb
+      - postgresdb
+      - rabbitmq
+      - elasticsearch
+      - redis-server
+    environment:
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+  mysqldb:
+    image: "mysql:8.0"
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: rest_api_library
+      MYSQL_USER: admysql
+      MYSQL_PASSWORD: 1
+    ports:
+      - 3312:3306
+    volumes:
+      - myvol:/var/bin/mysql
+  postgresdb:
+    image: "postgres:13.1"
+    container_name: postgresql_db
+    environment:
+      POSTGRES_USER: adpostgresql
+      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: rest_library_ver2
+    ports:
+      - 5434:5432
+    volumes:
+      - myvol:/var/bin/pg
+  redis-server:
+    container_name: multi_redis
+    image: 'redis'
+    ports:
+      - "6380:6379"
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+    restart: always
+    ports:
+      - "9201:9200"
+    volumes:
+      - myvol:/var/bin/elasticsearch
+    environment:
+      - discovery.type=single-node
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "15673:15672"
+
+volumes:
+  myvol:
+    name: multi-db
