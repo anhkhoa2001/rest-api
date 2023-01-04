@@ -45,7 +45,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
 
         //sau khi checktoken
-        //kiểm tra lại security context
+        //check lại security context
         filterChain.doFilter(request, response);
     }
 

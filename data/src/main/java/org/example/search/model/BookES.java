@@ -16,6 +16,8 @@ public class BookES {
     private String name;
     @Field(type = FieldType.Text, name = "price")
     private String price;
+    @Field(type = FieldType.Text, name = "content")
+    private String content;
     @Field(type = FieldType.Integer, name = "author_id")
     private Integer author_id;
     @Field(type = FieldType.Integer, name = "type_id")

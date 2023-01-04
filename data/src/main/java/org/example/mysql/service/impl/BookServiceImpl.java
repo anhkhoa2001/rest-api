@@ -32,8 +32,6 @@ public class BookServiceImpl implements BookService {
     private AuthorRepository authorRepository;
     @Autowired
     private BookTypeRepository bookTypeRepository;
-    @Autowired
-    private BookESRepository bookESRepository;
 
     @Override
     public List<Book> getAll() {
