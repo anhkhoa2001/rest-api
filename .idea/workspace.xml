@@ -4994,94 +4994,21 @@
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/logo-jhipster.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/proxy.conf.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/webpack.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/542e7023-bc3c-4f4f-82e2-5e3456a5305f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/542e7023-bc3c-4f4f-82e2-5e3456a5305f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/crawdata/impl/CrawBookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/crawdata/impl/CrawBookServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/resources/application-common.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/application-common.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/org/example/controller/AuthorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/org/example/controller/AuthorController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/application-local.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/application-common.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/application-docker.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/application-local.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/converter/AuthorRDConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/converter/BookTypeRDConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/model/AuthorRD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/model/BookTypeRD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/repository/AuthorRDRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/repository/BookTypeRDRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/repository/impl/AuthorRDRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/cache/repository/impl/BookTypeRDRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/config/ElasticSearchConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/config/MQ/PubSubConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/config/MQ/RPCConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/config/MQ/WorkerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/config/MysqlConfigurationDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/config/PostgresConfigurationDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/BookDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/BorrowBookDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/CustomerDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/LoginRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/RequestCrawBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/RequestTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/StatisticalByAuthor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/StatisticalByCharacter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/StatisticalByType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/dto/UserDetailCustomize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mq/ps/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mq/ps/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mq/rpc/ClientRPC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mq/rpc/ServerRPC.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mq/worker/ClientWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mq/worker/ServerWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/model/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/model/BookType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/repository/AuthorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/repository/BookRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/repository/BookTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/AuthorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/BookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/BookTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/AuthorServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/BookServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/mysql/service/impl/BookTypeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/model/Authority.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/model/BorrowBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/repository/AuthorityRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/repository/BorrowBookRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/repository/CustomerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/repository/PersonRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/AuthorityService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/BorrowBookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/PersonService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/converter/BorrowBookConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/converter/CustomerConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/impl/AuthorityServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/impl/BorrowBookServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/impl/CustomerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/postgres/service/impl/PersonServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/search/model/BookES.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/search/repository/BookESRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/search/service/BookESService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/search/service/converter/BookESConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/target/classes/org/example/search/service/impl/BookESServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/spring.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/spring.log.2022-12-26.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/spring.log.2022-12-27.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/classes/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/classes/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/target/data-1.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/data/target/data-1.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/customer_authority.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/pg_authority.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/pg_borrow_book.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/pg_customer.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/pg_person.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/15-4/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/15-4/2.png" beforeDir="false" />
@@ -5647,7 +5574,7 @@
     "WebServerToolWindowFactoryState": "false",
     "database.data.extractors.current.export.id": "SQL-Insert-Multirow.sql.groovy",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/kho/intern/elcom/multi-modules/api/target",
+    "last_opened_file_path": "C:/Users/ADMIN/Desktop/kho/intern/elcom/multi-modules",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -5672,11 +5599,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\Desktop\kho\intern\elcom\multi-modules" />
       <recent name="C:\Users\ADMIN\Desktop\kho\intern\elcom\multi-modules\api\target" />
       <recent name="C:\Users\ADMIN\Desktop\kho\intern\elcom\multi-modules\data\src\main\java\org\example" />
       <recent name="C:\Users\ADMIN\Desktop\kho\intern\elcom\multi-modules\api\src\main\java\org\example\controller" />
       <recent name="C:\Users\ADMIN\Desktop\kho\intern\elcom\multi-modules\data\src\main\java\org\example\postgres" />
-      <recent name="C:\Users\ADMIN\Desktop\kho\intern\elcom\multi-modules\data\src\main\java\org\example\mysql" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example" />
@@ -5743,7 +5670,7 @@
       <workItem from="1672764048885" duration="305000" />
       <workItem from="1672764393709" duration="1439000" />
       <workItem from="1672795137611" duration="482000" />
-      <workItem from="1672797385338" duration="5909000" />
+      <workItem from="1672797385338" duration="9955000" />
     </task>
     <servers />
   </component>

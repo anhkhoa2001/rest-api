@@ -20,7 +20,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/book/add"
+				"url": "{{hostUrl}}/book/add"
 			},
 			"response": []
 		},
@@ -29,7 +29,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/book"
+				"url": "{{hostUrl}}/book"
 			},
 			"response": []
 		},
@@ -47,7 +47,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/book/update/2"
+				"url": "{{hostUrl}}/book/update/2"
 			},
 			"response": []
 		},
@@ -56,7 +56,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "http://localhost:8080/book/delete/1"
+				"url": "{{hostUrl}}/book/delete/1"
 			},
 			"response": []
 		},
@@ -65,7 +65,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/book-type"
+				"url": "{{hostUrl}}/book-type"
 			},
 			"response": []
 		},
@@ -83,7 +83,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/book-type/add"
+				"url": "{{hostUrl}}/book-type/add"
 			},
 			"response": []
 		},
@@ -101,7 +101,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/book-type/update/2"
+				"url": "{{hostUrl}}/book-type/update/2"
 			},
 			"response": []
 		},
@@ -110,7 +110,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "http://localhost:8080/book-type/delete/3"
+				"url": "{{hostUrl}}/book-type/delete/3"
 			},
 			"response": []
 		},
@@ -118,7 +118,23 @@
 			"name": "Get Book Type By Name",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/book-type/detail?name=Ẩm thực - Nấu ăn",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"book-type",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ẩm thực - Nấu ăn"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -136,7 +152,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/author/add"
+				"url": "{{hostUrl}}/author/add"
 			},
 			"response": []
 		},
@@ -145,7 +161,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/author"
+				"url": "{{hostUrl}}/author"
 			},
 			"response": []
 		},
@@ -163,7 +179,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/author/update/2"
+				"url": "{{hostUrl}}/author/update/2"
 			},
 			"response": []
 		},
@@ -172,7 +188,7 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "http://localhost:8080/author/delete/7"
+				"url": "{{hostUrl}}/author/delete/7"
 			},
 			"response": []
 		},
@@ -181,7 +197,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/statistical/author"
+				"url": "{{hostUrl}}/statistical/author"
 			},
 			"response": []
 		},
@@ -190,7 +206,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/statistical/type"
+				"url": "{{hostUrl}}/statistical/type"
 			},
 			"response": []
 		},
@@ -199,7 +215,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/statistical/character"
+				"url": "{{hostUrl}}/statistical/character"
 			},
 			"response": []
 		},
@@ -210,20 +226,20 @@
 				"header": [
 					{
 						"key": "authorized",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY3MTc3MDUzNywiZXhwIjoxNjcxNzcwNjU3fQ.T7OJYuMtDL2_V7Jo_MLjNbBUvfeZzivgd2pSe5kdxSYjkRM0vFhDXH6p1wSBc0NgQHUEL3gMNj4eHXku6Q-znA",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY3MTc4NjExOSwiZXhwIjoxNjcxNzg2MjM5fQ._yGvHDJreRJOJ3N0rlg80vkFdSr0rB4B0x2-nIc5alzfhCCki0C69DnSzBqq5cc5d4atJQgHIfze2TgwivhiXg",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"khoadamtam1\",\r\n    \"password\": \"1\",\r\n    \"status\": true,\r\n    \"authority_ids\": [3]\r\n}",
+					"raw": "{\r\n    \"username\": \"admin3\",\r\n    \"password\": \"1\",\r\n    \"status\": true,\r\n    \"authority_ids\": [2]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:8080/customer/register"
+				"url": "{{hostUrl}}/customer/register"
 			},
 			"response": []
 		},
@@ -241,7 +257,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/authority"
+				"url": "{{hostUrl}}/authority"
 			},
 			"response": []
 		},
@@ -252,30 +268,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"khoadamtam\",\r\n    \"password\": \"1\"\r\n}",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:8080/api/login"
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Person",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "Add Person",
-			"request": {
-				"method": "GET",
-				"header": []
+				"url": "{{hostUrl}}/api/login"
 			},
 			"response": []
 		},
@@ -293,7 +293,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/borrow"
+				"url": "{{hostUrl}}/borrow"
 			},
 			"response": []
 		},
@@ -304,14 +304,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"start\": \"2022-02-02\",\r\n    \"end\": \"2022-12-10\"\r\n}",
+					"raw": "{\r\n    \"start\": \"2022-12-28\",\r\n    \"end\": \"2022-12-28\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:8080/statistical/timer"
+				"url": "{{hostUrl}}/statistical/timer"
 			},
 			"response": []
 		},
@@ -322,14 +322,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"start\": \"2023-11-10\",\r\n    \"end\": \"2023-12-20\"\r\n}",
+					"raw": "{\r\n    \"start\": \"2022-12-27\",\r\n    \"end\": \"2022-12-27\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://localhost:8080/statistical/most-books"
+				"url": "{{hostUrl}}/statistical/most-books"
 			},
 			"response": []
 		},
@@ -338,7 +338,16 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/author/cache/synchronize"
+				"url": "{{hostUrl}}/author/cache/synchronize"
+			},
+			"response": []
+		},
+		{
+			"name": "Synchronize Book Type Redis And DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{hostUrl}}/book-type/cache/synchronize"
 			},
 			"response": []
 		},
@@ -346,7 +355,8 @@
 			"name": "Get Author",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "{{hostUrl}}/author/cache/5"
 			},
 			"response": []
 		},
@@ -355,33 +365,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/author/cache"
-			},
-			"response": []
-		},
-		{
-			"name": "Synchronize Elasticsearch and DB",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "http://localhost:8080/book/elastic/synchronize"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Book In ElasticSearch",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "Synchronize Author Redis And DB",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "http://localhost:8080/book-type/cache/synchronize"
+				"url": "{{hostUrl}}/author/cache"
 			},
 			"response": []
 		},
@@ -390,7 +374,25 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/book-type/cache"
+				"url": "{{hostUrl}}/book-type/cache"
+			},
+			"response": []
+		},
+		{
+			"name": "Synchronize Elasticsearch and DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{hostUrl}}/book/elastic/synchronize"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book In ElasticSearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{hostUrl}}/book/elastic/4"
 			},
 			"response": []
 		},
@@ -399,7 +401,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/demo/rpc/10"
+				"url": "{{hostUrl}}/demo/rpc/10"
 			},
 			"response": []
 		},
@@ -407,7 +409,8 @@
 			"name": "Demo PS",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "{{hostUrl}}/demo/ps/10"
 			},
 			"response": []
 		},
@@ -416,7 +419,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/demo/worker/10"
+				"url": "{{hostUrl}}/demo/worker/1001"
 			},
 			"response": []
 		},
@@ -424,7 +427,22 @@
 			"name": "Craw Book Type",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/crawler?url=/",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"crawler"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "/"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -442,7 +460,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/crawler"
+				"url": "{{hostUrl}}/crawler"
 			},
 			"response": []
 		}

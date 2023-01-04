@@ -11,7 +11,7 @@ services:
       - mysqldb
       - postgresdb
       - rabbitmq
-      - elasticsearch
+      - elastic
       - redis-server
     environment:
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
@@ -42,22 +42,25 @@ services:
     container_name: multi_redis
     image: 'redis'
     ports:
-      - "6380:6379"
-  elasticsearch:
+      - "6379:6379"
+  elastic:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
     restart: always
     ports:
-      - "9201:9200"
+      - "9200:9200"
+      - "9300:9300"
     volumes:
       - myvol:/var/bin/elasticsearch
     environment:
-      - discovery.type=single-node
+        - discovery.type=single-node
+        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
     restart: always
     ports:
-      - "15673:15672"
+      - "15672:15672"
+      - "5672:5672"
 
 volumes:
   myvol:

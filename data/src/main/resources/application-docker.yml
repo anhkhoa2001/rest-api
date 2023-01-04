@@ -13,7 +13,7 @@ spring:
 
 elasticsearch:
   port: 9200
-  host: elasticsearch
+  host: elastic
 mq:
   username: guest
   password: guest
