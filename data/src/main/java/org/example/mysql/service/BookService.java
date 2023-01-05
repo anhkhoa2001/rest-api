@@ -2,9 +2,6 @@ package org.example.mysql.service;
 
 
 import org.example.dto.BookDTO;
-import org.example.dto.StatisticalByAuthor;
-import org.example.dto.StatisticalByCharacter;
-import org.example.dto.StatisticalByType;
 import org.example.mysql.model.Book;
 
 import java.util.List;

@@ -27,11 +27,12 @@ public class CrawBookServiceImpl implements CrawBookService {
     @Value("${crawler.agent}")
     private String agent;
 
+    final Integer size = 5;
+
     @Override
     public void crawContent(List<RequestCrawBook> crawBooks) {
-        int size = crawBooks.size();
         Executor executor = Executors.newFixedThreadPool(size);
-        for(int i=0; i<size; i++) {
+        for(int i=0; i<crawBooks.size(); i++) {
             executor.execute(new ThreadCustomize(crawBooks.get(i), bookService, url, agent, cssSelectorContent));
         }
     }
