@@ -78,7 +78,7 @@ ALTER TABLE IF EXISTS public.pg_borrow_book
     OWNER to postgres;
 -- Index: index_author_id
 
--- DROP INDEX IF EXISTS public.index_author_id;
+DROP INDEX IF EXISTS public.index_author_id;
 
 CREATE INDEX IF NOT EXISTS index_author_id
     ON public.pg_borrow_book USING hash
@@ -86,7 +86,7 @@ CREATE INDEX IF NOT EXISTS index_author_id
 ;
 -- Index: index_book_id
 
--- DROP INDEX IF EXISTS public.index_book_id;
+DROP INDEX IF EXISTS public.index_book_id;
 
 CREATE INDEX IF NOT EXISTS index_book_id
     ON public.pg_borrow_book USING hash

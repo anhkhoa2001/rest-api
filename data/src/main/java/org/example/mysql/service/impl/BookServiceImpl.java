@@ -42,7 +42,6 @@ public class BookServiceImpl implements BookService {
         if(author != null && bookType != null) {
             target.setAuthor(author);
             target.setBookType(bookType);
-            target.setPrice(source.getPrice());
             target.setName(source.getName());
             target.setContent(source.getContent());
 
@@ -69,6 +68,15 @@ public class BookServiceImpl implements BookService {
     @Override
     public void delete(Integer id) {
         bookRepository.deleteById(id);
+    }
+
+    @Override
+    public Book getByName(String name) {
+        try {
+            return bookRepository.getBookByName(name);
+        } catch (Exception e) {
+            return null;
+        }
     }
 
 }

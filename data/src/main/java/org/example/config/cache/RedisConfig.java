@@ -1,4 +1,4 @@
-package org.example.config;
+package org.example.config.cache;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -22,17 +22,17 @@ public class RedisConfig {
     @Value("${redis.port}")
     private Integer port;
 
-   /* @Value("${redis.username}")
+    @Value("${redis.username}")
     private String username;
 
     @Value("${redis.pass}")
-    private String pass;*/
+    private String pass;
 
     @Bean
     public LettuceConnectionFactory connectionFactory() {
         RedisStandaloneConfiguration configuration = new RedisStandaloneConfiguration(host, port);
-        /*configuration.setPassword(pass);
-        configuration.setUsername(username);*/
+        configuration.setPassword(pass);
+        configuration.setUsername(username);
         return new LettuceConnectionFactory(configuration);
     }
 

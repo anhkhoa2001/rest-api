@@ -17,8 +17,8 @@ public class BookTypeRDRepositoryImpl implements BookTypeRDRepository {
     public static final String HASH_KEY = "BookTypeRD";
 
     public static final String LIST_KEY = "BookTypeRDs";
-    @Autowired
-    private RedisTemplate template;
+//    @Autowired
+    private RedisTemplate template = new RedisTemplate();
 
     @Autowired
     private BookTypeRDConverter bookTypeRDConverter;

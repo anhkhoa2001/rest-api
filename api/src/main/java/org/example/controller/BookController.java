@@ -7,6 +7,7 @@ import org.example.search.service.BookESService;
 import org.example.mysql.model.Book;
 import org.example.mysql.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -127,6 +128,19 @@ public class BookController {
         BookES bookES = bookESService.findById(id);
 
         if(bookES == null) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(bookES, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/elastic/getbyname")
+    public ResponseEntity<List<BookES>> findByNameInElastic(@Param("name") String name) {
+        List<BookES> bookES = bookESService.findByName(name);
+
+        if(bookES == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if(bookES.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 

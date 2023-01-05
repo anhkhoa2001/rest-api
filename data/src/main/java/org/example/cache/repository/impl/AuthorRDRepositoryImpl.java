@@ -18,8 +18,8 @@ public class AuthorRDRepositoryImpl implements AuthorRDRepository {
     public static final String HASH_KEY = "AuthorRD";
 
     public static final String LIST_KEY = "AuthorRDs";
-    @Autowired
-    private RedisTemplate template;
+//    @Autowired
+    private RedisTemplate template = new RedisTemplate();
 
     @Autowired
     private AuthorRDConverter authorRDConverter;

@@ -37,10 +37,9 @@ public class CrawlerController {
 
     @PostMapping
     @ResponseBody
-    public ResponseEntity<Boolean> crawContentBooks(@RequestBody List<RequestCrawBook> crawBooks) {
+    public ResponseEntity<Boolean> crawContentBooks() {
         try {
-            crawBookService.crawContent(crawBooks);
-
+            crawBookService.crawContent();
             return new ResponseEntity<>(true, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();

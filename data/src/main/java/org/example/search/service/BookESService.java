@@ -12,4 +12,6 @@ public interface BookESService {
     List<BookES> synchronize(List<Book> books);
 
     BookES findById(Integer id);
+
+    List<BookES> findByName(String name);
 }

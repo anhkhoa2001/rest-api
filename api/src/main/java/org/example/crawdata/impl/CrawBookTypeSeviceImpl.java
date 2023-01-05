@@ -38,12 +38,15 @@ public class CrawBookTypeSeviceImpl implements CrawBookTypeService {
             List<BookType> rs = new ArrayList<>();
             for (Element e : elements) {
                 String name = e.text();
-                BookType bookType = new BookType();
-                bookType.setName(name);
-                bookType = bookTypeService.addBookType(bookType);
-                bookType.setBooks(new HashSet<>());
-                if(bookType.getType_id() != null) {
-                    rs.add(bookType);
+                BookType bookType = bookTypeService.getByName(name);
+                if(bookType == null) {
+                    bookType = new BookType();
+                    bookType.setName(name);
+                    bookType = bookTypeService.addBookType(bookType);
+                    bookType.setBooks(new HashSet<>());
+                    if(bookType.getType_id() != null) {
+                        rs.add(bookType);
+                    }
                 }
             }
 

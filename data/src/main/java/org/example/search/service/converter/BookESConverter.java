@@ -15,7 +15,6 @@ public class BookESConverter {
         BookES target = new BookES();
         target.setId(source.getId());
         target.setName(source.getName());
-        target.setPrice(source.getPrice());
         target.setContent(source.getContent());
         target.setType_id(source.getBookType().getType_id());
         target.setAuthor_id(source.getAuthor().getId());

@@ -10,10 +10,8 @@
       <change afterPath="$PROJECT_DIR$/../../../be/Servlet/mong1tet/mong1tet.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../be/Servlet/shopfpt/shopfpt.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../be/Spring-Boot/security-tutotials/src/main/java/khoadt/tutorials/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../multi-test/api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../multi-test/data/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../multi-test/data/src/main/java/org/example/postgres/model/Child.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../multi-test/data/src/main/java/org/example/postgres/model/Parent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../micro-library/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../micro-library/gateway/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../osp/uchi/05.Source_code/CT_API/uchi_stp.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../osp/uchi/05.Source_code/STP/uchi_stp_v3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../osp/uchi/05.Source_code/VPCC/uchi_vpcc.iml" afterDir="false" />
@@ -4994,10 +4992,38 @@
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/logo-jhipster.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/proxy.conf.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../be/Spring-Boot/custom-jhipster/webpack/webpack.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7194eca-956a-46a2-a256-0de7cea77b15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7194eca-956a-46a2-a256-0de7cea77b15.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/AuthorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/AuthorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/controller/CrawlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/controller/CrawlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/CrawBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/CrawBookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/customize/ThreadCustomize.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/customize/ThreadBookTypeCustomize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/impl/CrawBookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/impl/CrawBookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/impl/CrawBookTypeSeviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/org/example/crawdata/impl/CrawBookTypeSeviceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/application-local.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/cache/repository/impl/AuthorRDRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/cache/repository/impl/AuthorRDRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/cache/repository/impl/BookTypeRDRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/cache/repository/impl/BookTypeRDRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/config/cache/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/dto/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/dto/BookDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/repository/AuthorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/AuthorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/AuthorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/AuthorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/mysql/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/search/repository/BookESRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/search/repository/BookESRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/BookESService.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/BookESService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/converter/BookESConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/converter/BookESConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/impl/BookESServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/java/org/example/search/service/impl/BookESServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/struct.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/struct.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/15-4/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../error/15-4/2.png" beforeDir="false" />
@@ -5525,13 +5551,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="HTTP Public Environment File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/api/src/main/java/org/example/crawdata/impl/CrawBookServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -5551,38 +5582,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "SQL-Insert-Multirow.sql.groovy",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/ADMIN/Desktop/kho/intern/elcom/multi-modules/config",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.400184",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "spring.configuration.checksum": "8dc5243a5019e07d8abb5a368040df6b",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL-Insert-Multirow.sql.groovy&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/Desktop/kho/intern/elcom/multi-modules/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.400184&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8dc5243a5019e07d8abb5a368040df6b&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -5626,7 +5658,9 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml.rabbitmq: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -5680,42 +5714,18 @@
       <workItem from="1672764048885" duration="305000" />
       <workItem from="1672764393709" duration="1439000" />
       <workItem from="1672795137611" duration="482000" />
-      <workItem from="1672797385338" duration="22230000" />
+      <workItem from="1672797385338" duration="23827000" />
+      <workItem from="1672882132873" duration="134000" />
+      <workItem from="1672882280651" duration="170000" />
+      <workItem from="1672882926550" duration="1034000" />
+      <workItem from="1672883974999" duration="3620000" />
+      <workItem from="1672890101707" duration="6391000" />
+      <workItem from="1672901620996" duration="957000" />
+      <workItem from="1672902731721" duration="5574000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/org/example/controller/LoginController.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

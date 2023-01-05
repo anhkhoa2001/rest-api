@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8087
   message: Hello Spring Boot
 
 spring:
@@ -10,6 +10,8 @@ spring:
       ddl-auto: update
     show-sql: true
     generate-ddl: true
+  cache:
+    type: memcached
 
 logging:
   file:

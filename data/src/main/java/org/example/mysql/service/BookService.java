@@ -14,4 +14,6 @@ public interface BookService {
     Book update(Book book);
     void delete(Integer id);
 
+    Book getByName(String name);
+
 }

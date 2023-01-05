@@ -6,6 +6,7 @@ import org.example.search.service.BookESService;
 import org.example.search.service.converter.BookESConverter;
 import org.example.mysql.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,7 +24,8 @@ public class BookESServiceImpl implements BookESService {
 
     @Override
     public List<BookES> getAll() {
-        return (List<BookES>) bookESRepository.findAll();
+        Page<BookES> page = (Page<BookES>) bookESRepository.findAll();
+        return page.toList();
     }
 
     @Override
@@ -45,4 +47,11 @@ public class BookESServiceImpl implements BookESService {
     public BookES findById(Integer id) {
         return bookESRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public List<BookES> findByName(String name) {
+        return bookESRepository.findBookESByName(name);
+    }
+
+
 }

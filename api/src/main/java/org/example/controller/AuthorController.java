@@ -1,6 +1,7 @@
 package org.example.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.cache.repository.AuthorMCRepository;
 import org.example.mysql.model.Author;
 import org.example.mysql.service.AuthorService;
 import org.example.cache.model.AuthorRD;
@@ -11,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -22,6 +24,9 @@ public class AuthorController {
 
     @Autowired
     private AuthorRDRepository authorRDRepository;
+
+    @Autowired
+    private AuthorMCRepository authorMCRepository;
 
     @GetMapping
     public ResponseEntity<List<Author>> getAll() {
@@ -111,7 +116,7 @@ public class AuthorController {
 
 
     @GetMapping(value = "/cache/synchronize")
-    public ResponseEntity<List<Author>> synchronize() {
+    public ResponseEntity<List<Author>> synchronizeCache() {
         List<Author> authors = authorService.getAll();
         authors = authorRDRepository.saveByHash(authors);
         if(authors == null) {
@@ -121,5 +126,30 @@ public class AuthorController {
         }
 
         return new ResponseEntity<>(authors, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/memcache/synchronize")
+    public ResponseEntity<List<Author>> synchronizeMemcache() {
+        List<Author> authors = authorService.getAll();
+        authors = authors.stream().map(e -> {
+            return authorMCRepository.save(e);
+        }).collect(Collectors.toList());
+        if(authors == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        } else if(authors.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(authors, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/memcache/{id}")
+    public ResponseEntity<Author> findByIdInMemcache(@PathVariable Integer id) {
+        Author author = authorMCRepository.findById(id);
+        if(author == null) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(author, HttpStatus.OK);
     }
 }
